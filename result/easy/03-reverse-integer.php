@@ -15,13 +15,23 @@ class Solution {
         if($x < 0) {
             $signe = -1;
         }
-        return strrev((string)$x) * $signe;
+
+        $x = strrev((string)$x);
+
+        if($x > pow(2, 31)) {
+            return 0;
+        }
+        else {
+            return intval($x) * $signe;
+        }
+        
     }
 }
 
 $solution = new Solution();
 
-echo $solution->reverse(123) . PHP_EOL;
-echo $solution->reverse(-123) . PHP_EOL;
-echo $solution->reverse(120) . PHP_EOL;
-echo $solution->reverse(1534236469) . PHP_EOL;
+echo $solution->reverse(123) . PHP_EOL; //expect 321
+echo $solution->reverse(-123) . PHP_EOL;//-321
+echo $solution->reverse(120) . PHP_EOL; //12
+echo $solution->reverse(1534236469) . PHP_EOL; // 0 // output error 9646324351
+
