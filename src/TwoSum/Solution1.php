@@ -1,7 +1,5 @@
 <?php
 
-namespace Leetcode\TwoSum;
-
 
 /**
  * Project: leetcode

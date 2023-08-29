@@ -1,13 +1,23 @@
 <?php
-
-
 /**
  * Result URL: https://leetcode.com/submissions/detail/290628567/
  */
+class Solution {
 
-require "../../vendor/autoload.php";
+    /**
+     * @param Integer $x
+     * @return Integer
+     */
+    function reverse($x) {
 
-use Leetcode\ReverseInteger\Solution;
+        $signe = 1;
+
+        if($x < 0) {
+            $signe = -1;
+        }
+        return strrev((string)$x) * $signe;
+    }
+}
 
 $solution = new Solution();
 

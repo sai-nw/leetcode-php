@@ -1,7 +1,5 @@
 <?php
 
-namespace Leetcode\TwoSumIIInputArrayIsSorted;
-
 /**
  * Project: leetcode
  * Problem URL: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
